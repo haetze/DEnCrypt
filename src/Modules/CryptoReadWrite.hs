@@ -24,7 +24,7 @@ writeToDisk location s  p = do
 readFromDisk:: String -> String -> IO String
 readFromDisk location p = do
   home <- getHomeDirectory
-  s <- B.readFile (home ++ location)
+  s <- B.readFile (home ++ "/" ++ location)
   return . B.unpack . decipher p $ B.unpack s
 
 
