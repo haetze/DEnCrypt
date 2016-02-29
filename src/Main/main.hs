@@ -1,7 +1,5 @@
 --Richard Stewing
 -- <28.02.2016>
-
-
 --module main where
 
 
