@@ -1,0 +1,8 @@
+--Richard Stewing
+--25.02.2016
+--CryptoReadWrite.hs
+--Wrapper for crypto read write functions
+
+
+module CryptoReadWrite where
+
