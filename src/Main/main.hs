@@ -11,7 +11,7 @@ import System.IO
 main = do
   args <- getArgs
   password <- getPassword
-  case (words args) of
+  case args of
     ("decrypt":inName:outName:_) -> do
       s <- readFromDisk inName password
       writeFile outName s
