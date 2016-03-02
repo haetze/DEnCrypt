@@ -12,6 +12,7 @@ import System.Directory
 main = do
   args <- getArgs
   putStr "Enter Password:"
+  hFlush stdout
   password <- getPassword
   case args of
     ("decrypt":inName:outName:_) -> do
