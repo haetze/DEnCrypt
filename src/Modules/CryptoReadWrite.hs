@@ -17,14 +17,12 @@ import System.Posix.IO (stdInput)
 --writeToDisk:: location -> content -> password -> IO ()
 writeToDisk:: String -> String -> String -> IO ()
 writeToDisk location s  p = do 
-  home <- getHomeDirectory
-  B.writeFile (home ++ "/" ++ location ) (ciph p s)
+  B.writeFile location (ciph p s)
 
 --readFromDisk:: location -> password -> IO String
 readFromDisk:: String -> String -> IO String
 readFromDisk location p = do
-  home <- getHomeDirectory
-  s <- B.readFile (home ++ "/" ++ location)
+  s <- B.readFile location
   return . B.unpack . decipher p $ B.unpack s
 
 
