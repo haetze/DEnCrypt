@@ -11,6 +11,7 @@ import System.Directory
 
 main = do
   args <- getArgs
+  putStr "Enter Password:"
   password <- getPassword
   case args of
     ("decrypt":inName:outName:_) -> do
