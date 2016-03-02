@@ -7,6 +7,7 @@
 import CryptoReadWrite
 import System.Environment (getArgs)
 import System.IO
+import System.Directory
 
 main = do
   args <- getArgs

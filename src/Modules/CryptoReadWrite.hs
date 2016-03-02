@@ -8,7 +8,7 @@
 module CryptoReadWrite where
 
 import Crypto
-import System.Directory
+
 import qualified Data.ByteString.Char8 as B
 import System.Posix.Terminal
 import System.Posix.IO (stdInput)
