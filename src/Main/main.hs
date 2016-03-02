@@ -23,7 +23,7 @@ main = do
       writeToDisk (home ++ "/" ++ outName) s password
     ("-f":"decrypt":inName:outName:_) -> do
       s <- readFromDisk inName password
-      writeFile ("../../" ++ outName) s
+      writeFile  outName s
     ("-f":"encrypt":inName:outName:_) -> do
       home <- getHomeDirectory
       s <- readFile inName
